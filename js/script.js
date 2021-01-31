@@ -1,11 +1,54 @@
-// Top date, works
+// Variables I think I'll Need
+
+
+// Top date
 moment(Date);
-$("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+$("#currentTimeAndDate").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+
+
 
 var currentTime = moment();
-currentTime = currentTime.startOf("hour");
-    // Turns hour back to zero. 12:30 would become 12:00
 
+function workHours() {
+    var hours = [];
+    var workHoursInADay = 8;
+    for (let i = 0; i < workHoursInADay; i++) {
+        var html =
+        '<div class="row time-block">'+
+        '<div class="input-group input-group-sm mb-3">' +
+        '<div class="input-group-prepend">' +
+        '<span class="input-group-text" id="inputGroup-sizing-sm">9000 AM </span>' +
+        '</div>'+
+        '<input type = "text" class="form-control" aria - label="Sizing example input"' +
+        ' aria - describedby="inputGroup-sizing-sm">'+
+        '<div><button class="saveBtn"><i class="fas fa-code"></i></button></div>' +
+        '</div >'+
+        '</div >';
+    hours.push(html)
+
+
+
+
+        console.log(i);
+    }
+    document.getElementById("container").innerHTML = html;
+    console.log(hours);
+}
+workHours();
+
+
+
+
+
+
+
+
+
+
+
+// NOT SURE WHAT THIS CODE DOES. CAME WITH CODE I FOUND. 
+// var currentTime = moment();
+// currentTime = currentTime.startOf("hour");
 
 
 
@@ -19,7 +62,7 @@ currentTime = currentTime.startOf("hour");
 // Clock btn text Imput box and Save Btn
 
 // BLOCK DETAIL & Design
-    // 8 block total
+    // 8 block total - DONE: just need to duplicate
     // give each box in the HTML a id of 1pm, 2pm ect. 
     // Block will have a commit button to local storage write to save.
     // Block will list the time 
