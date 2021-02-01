@@ -1,5 +1,11 @@
 // Variables I think I'll Need
 
+// MIGHT BE NEEDED FOR LOCAL STORAGE? 
+var workHours = [9, 10, 11, 12, 1, 2, 3, 4, 5,]
+
+
+// var currentTime = moment();
+// currentTime = currentTime.startOf("hour");
 
 // Top date
 moment(Date);
@@ -7,48 +13,51 @@ $("#currentTimeAndDate").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
 
 
-var currentTime = moment();
-
-function workHours() {
-    var hours = [];
-    var workHoursInADay = 8;
-    for (let i = 0; i < workHoursInADay; i++) {
-        var html =
-        '<div class="row time-block">'+
-        '<div class="input-group input-group-sm mb-3">' +
-        '<div class="input-group-prepend">' +
-        '<span class="input-group-text" id="inputGroup-sizing-sm">9000 AM </span>' +
-        '</div>'+
-        '<input type = "text" class="form-control" aria - label="Sizing example input"' +
-        ' aria - describedby="inputGroup-sizing-sm">'+
-        '<div><button class="saveBtn"><i class="fas fa-code"></i></button></div>' +
-        '</div >'+
-        '</div >';
-    hours.push(html)
 
 
 
 
-        console.log(i);
-    }
-    document.getElementById("container").innerHTML = html;
-    console.log(hours);
-}
-workHours();
-
-
-
-
-
-
-
-
-
-
-
-// NOT SURE WHAT THIS CODE DOES. CAME WITH CODE I FOUND. 
+//  MY ATTEMPT TO POPULATE THE BLOCKS DYNAMICLY
 // var currentTime = moment();
-// currentTime = currentTime.startOf("hour");
+
+// function workHours() {
+//     var hours = [];
+//     var workHoursInADay = 8;
+//     for (let i = 0; i < workHoursInADay; i++) {
+//         var html =
+//         '<div class="row time-block">'+
+//         '<div class="input-group input-group-sm mb-3">' +
+//         '<div class="input-group-prepend">' +
+//         '<span class="input-group-text" id="inputGroup-sizing-sm">9000 AM </span>' +
+//         '</div>'+
+//         '<input type = "text" class="form-control" aria - label="Sizing example input"' +
+//         ' aria - describedby="inputGroup-sizing-sm">'+
+//         '<div><button class="saveBtn"><i class="fas fa-code"></i></button></div>' +
+//         '</div >'+
+//         '</div >';
+//     hours.push(html)
+
+
+
+
+//         console.log(i);
+//     }
+//     document.getElementById("container").innerHTML = html;
+//     console.log(hours);
+// }
+// workHours();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
