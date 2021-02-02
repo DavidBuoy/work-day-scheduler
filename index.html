@@ -20,16 +20,13 @@
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentTimeAndDate" class="lead"></p>
+    <p id="currentDay" class="lead"></p>
   </header>
 
   <div class="container" id="container">
 
-
-
-
     <!-- this is the 9am block -->
-    <div class="row time-block">
+    <div class="row time-block" id="9">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
 
@@ -40,21 +37,20 @@
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
     </div>
-
     <!-- this is the 10am block -->
-    <form class="row time-block">
+    <div class="row time-block" id="10">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">10 AM</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm" placeholder="And this whole time action through the day thing..">
+          aria-describedby="inputGroup-sizing-sm">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
     <!-- this is the 11am block -->
-    <form class="row time-block">
+    <div class="row time-block" id="11">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">11 AM</span>
@@ -63,10 +59,10 @@
           aria-describedby="inputGroup-sizing-sm">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
     <!-- this is the 12pm block -->
-    <form class="row time-block">
+    <form class="row time-block" id="12">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">12 PM</span>
@@ -78,20 +74,19 @@
     </form>
 
     <!-- this is the 1pm block -->
-    <form class="row time-block">
+    <div class="row time-block" id="13">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">1 PM</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm"
-          placeholder="Pretty sure I did all of this wrong, I need help with javascript....">
+          aria-describedby="inputGroup-sizing-sm">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
     <!-- this is the 2pm block -->
-    <form class="row time-block">
+    <div class="row time-block" id="14">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">2 PM</span>
@@ -100,49 +95,47 @@
           aria-describedby="inputGroup-sizing-sm">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
     <!-- this is the 3pm block -->
-    <form class="row time-block">
+    <form class="row time-block" id="15">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">3 PM</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm">
+          aria-describedby="inputGroup-sizing-sm" placeholder="I dont get local storage.">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
     </form>
 
     <!-- this is the 4pm block -->
-    <form class="row time-block">
+    <div class="row time-block" id="16">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">3 PM</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">4 PM</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-sm"
           placeholder="I'll take any resource you have to help me do this or figure it out.">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
     <!-- this is the 5pm block -->
-    <form class="row time-block">
+    <div class="row time-block" id="17">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">3 PM</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">5 PM</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-sm"
-          placeholder="I mean, i got the date & time thing to work on the top so i got that going for me...">
+          placeholder="I mean, i got the date & time thing to working, so i got that going for me...">
         <div><button class="saveBtn"><i class="fas fa-code"></i></button></div>
       </div>
-    </form>
+    </div>
 
-
-
-
+<!-- clear all button -->
     <div class="row">
       <div class="col text-center">
         <button type="button" class="btn btn-primary">Clear Calendar</button>

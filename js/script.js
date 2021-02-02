@@ -1,66 +1,56 @@
 // Variables I think I'll Need
 
-// MIGHT BE NEEDED FOR LOCAL STORAGE? 
-var workHours = [9, 10, 11, 12, 1, 2, 3, 4, 5,]
+$(document).ready(function () {
+
+    // Top date and time function.
+    moment(Date);
+    $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+
+    // checking the time for each time block to make sure its currents. 
+    function timeColor() {
+        var currentHours = moment().hours();
+        $(".time-block").each(function () {
+            var blockHours = parseInt($(this).attr("id"));
 
 
-// var currentTime = moment();
-// currentTime = currentTime.startOf("hour");
-
-// Top date
-moment(Date);
-$("#currentTimeAndDate").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
-
-
-
-
-
-
-
-//  MY ATTEMPT TO POPULATE THE BLOCKS DYNAMICLY
-// var currentTime = moment();
-
-// function workHours() {
-//     var hours = [];
-//     var workHoursInADay = 8;
-//     for (let i = 0; i < workHoursInADay; i++) {
-//         var html =
-//         '<div class="row time-block">'+
-//         '<div class="input-group input-group-sm mb-3">' +
-//         '<div class="input-group-prepend">' +
-//         '<span class="input-group-text" id="inputGroup-sizing-sm">9000 AM </span>' +
-//         '</div>'+
-//         '<input type = "text" class="form-control" aria - label="Sizing example input"' +
-//         ' aria - describedby="inputGroup-sizing-sm">'+
-//         '<div><button class="saveBtn"><i class="fas fa-code"></i></button></div>' +
-//         '</div >'+
-//         '</div >';
-//     hours.push(html)
+            if (currentHours === blockHours) {
+                $(this).addClass("present");
+            }
+            else if (currentHours > blockHours) {
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
+            }
+        });
+    }
+    timeColor();
 
 
+    // Listener to hopefully add info to Local Storage. 
+    // BROKEN.....
+    $(".saveBtn").on("click", function () {
+        var timeColor = $(this).siblings('imput').attr('id');
+        var value = $(this).siblings('imput').val()
+        localStorage.setItem(timeColor, value)
+    })
 
+    
+    // this is what stores the info from above listener. I think.
+    $("#9 .schedule").val(localStorage.getItem("9"));
+    $("#10 .schedule").val(localStorage.getItem("10"));
+    $("#11 .schedule").val(localStorage.getItem("11"));
+    $("#12 .schedule").val(localStorage.getItem("12"));
+    $("#13 .schedule").val(localStorage.getItem("13"));
+    $("#14 .schedule").val(localStorage.getItem("14"));
+    $("#15 .schedule").val(localStorage.getItem("15"));
+    $("#16 .schedule").val(localStorage.getItem("16"));
+    $("#17 .schedule").val(localStorage.getItem("17"));
 
-//         console.log(i);
-//     }
-//     document.getElementById("container").innerHTML = html;
-//     console.log(hours);
-// }
-// workHours();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 
 
